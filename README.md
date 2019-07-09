@@ -64,7 +64,7 @@ Direct\
 
 The correct structure can then be validated by opening the newly generated POSCAR file in VESTA. 
 
-<img src="https://github.com/cameronmcelfresh/vasp-toolkit/blob/master/w_cell.jpg" width="600">
+<img src="https://github.com/cameronmcelfresh/vasp-toolkit/blob/master/w_cell.JPG" width="600">
 
 The above picture confirms an 2x2x2 FCC structure. 
 
