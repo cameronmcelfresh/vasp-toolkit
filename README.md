@@ -8,25 +8,25 @@ Toolkit for analyzing the output files and generating the input files for VASP d
 
 ## Installing
 
-## POSCAR_generator
+### POSCAR_generator
 
 #### Input
 
 #### Output
 
-## NEB_image_generator
+### NEB_image_generator
 
 #### Input
 
 #### Output
 
-## ENCUT_generate
+### ENCUT_generate
 
 #### Input
 
 #### Output
 
-## ENCUT_scape
+### ENCUT_scape
 
 #### Input
 
