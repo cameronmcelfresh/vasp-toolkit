@@ -60,7 +60,7 @@ Direct\
 0.75 0.25 0.25\
 0.75 0.25 0.75\
 0.75 0.75 0.25\
-0.75 0.75 0.75\
+0.75 0.75 0.75
 
 The correct structure can then be validated by opening the newly generated POSCAR file in VESTA. 
 
