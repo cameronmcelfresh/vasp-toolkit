@@ -36,7 +36,7 @@ lattice_parameter = 3.22
 box_size = 2
 
 #### Output
-A POSCAR file is created in the same directory as the the current directory as the POSCAR_generator.py file. The file reads:
+A POSCAR file is created in the same directory as the the current directory as the POSCAR_generator.py file. The output of the this example reads:
 
 W bcc\
 6.44\
