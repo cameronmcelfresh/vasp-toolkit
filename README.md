@@ -150,7 +150,7 @@ Please enter the prefix for the new directory: Tungsten2x2x2
 
 
 #### Output
-The result of above input is a sequence of directories filled with VASP starting files with the given prefixes. The numerical value following "ENCUT" in the directory title is equivalent to the ENCUT value provided in respective INCAR file.
+The result of above input is a sequence of directories filled with VASP starting files with the given prefixes. The numerical value following "encut" in the directory title is equivalent to the ENCUT value provided in respective INCAR file.
 
 <img src="https://github.com/cameronmcelfresh/vasp-toolkit/blob/master/encut_result.JPG" width="600">
 
