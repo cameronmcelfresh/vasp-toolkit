@@ -183,7 +183,7 @@ Toten_val: -147.92\
 Toten_val: -147.92\
 Toten_val: -147.92\
 Toten_val: -147.92\
-Toten_val: -147.92\
+Toten_val: -147.92
 
 Encut_val: 200\
 Toten_val: 1417.13\
@@ -200,7 +200,7 @@ Toten_val: -206.98\
 Toten_val: -206.98\
 Toten_val: -206.98\
 Toten_val: -206.98\
-Toten_val: -206.98\
+Toten_val: -206.98
 
 Encut_val: 300\
 Toten_val: 1796.14\
@@ -217,7 +217,7 @@ Toten_val: -207.03\
 Toten_val: -207.03\
 Toten_val: -207.03\
 Toten_val: -207.03\
-Toten_val: -207.03\
+Toten_val: -207.03
 
 Encut_val: 400\
 Toten_val: 2065.21\
@@ -233,7 +233,7 @@ Toten_val: -207.04\
 Toten_val: -207.04\
 Toten_val: -207.04\
 Toten_val: -207.04\
-Toten_val: -207.04\
+Toten_val: -207.04
 
 Encut_val: 500\
 Toten_val: 2270.94\
@@ -255,9 +255,9 @@ ENCUT   TOTEN\
 200     -206.98\
 300     -207.03\
 400     -207.04\
-500     -207.04\
+500     -207.04
 
-<img src="https://github.com/cameronmcelfresh/vasp-toolkit/blob/master/encut_plot.JPG" width="600">
+<img src="https://github.com/cameronmcelfresh/vasp-toolkit/blob/master/encut_plot.JPG" width="400">
 
 
 
