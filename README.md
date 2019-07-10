@@ -124,7 +124,7 @@ To produce folders for trials with ENCUT = 50, 100, 150, 200, and 250, the seque
 
 3. Select destination directory
 
-<img src="https://github.com/cameronmcelfresh/vasp-toolkit/blob/master/select_dest.JPG" width="600">
+<img src="https://github.com/cameronmcelfresh/vasp-toolkit/blob/master/select_destination.JPG" width="600">
 
 4. Prompt user to enter relevant ENCUT value information
 
@@ -152,7 +152,7 @@ Please enter the prefix for the new directory: Tungsten2x2x2
 #### Output
 The result of above input is a sequence of directories filled with VASP starting files with the given prefixes. The numerical value following "ENCUT" in the directory title is equivalent to the ENCUT value provided in respective INCAR file.
 
-<img src="https://github.com/cameronmcelfresh/vasp-toolkit/blob/master/result.JPG" width="600">
+<img src="https://github.com/cameronmcelfresh/vasp-toolkit/blob/master/encut_result.JPG" width="600">
 
 
 ### ENCUT_scape
