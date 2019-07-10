@@ -104,10 +104,56 @@ A series of folders labeled 00, 01, 02, ..etc. will be generated - each containi
 Note that the first and last folder (00, and 07 in this case) hold the same positions as the CONTCAR_ei and CONTCAR_ef files, respectively. 
 
 ### ENCUT_generate
+This program generates the datafiles and directories to run a series of DFT simulations that test varying the ENCUT values.
 
 #### Input
+Running this program follows the sequence. 
+
+1. Run program
+2. Prompt for user to select original directory containing starting files (INCAR, KPOINTS, POTCAR, RUN_VASP.sh)
+3. Prompt for user to select destination directory
+4. Prompt for user to enter minimum, maximum, and number of ENCUT trials to generate
+5. Prompt for user to enter desired folder prefix (no spaces - something simple such as Test2x2x2)
+
+To produce folders for trials with ENCUT = 50, 100, 150, 200, and 250, the sequence would be;
+
+1. Run program
+2. Select original directory
+
+<img src="https://github.com/cameronmcelfresh/vasp-toolkit/blob/master/select_orig.JPG" width="600">
+
+3. Select destination directory
+
+<img src="https://github.com/cameronmcelfresh/vasp-toolkit/blob/master/select_dest.JPG" width="600">
+
+4. Prompt user to enter relevant ENCUT value information
+
+Please enter ENCUT minimum: 50
+
+Please enter ENCUT maximum: 250
+
+Please enter the number of encut values to make: 5
+You will make encut values:
+50
+100
+150
+200
+250
+
+
+Are you satisfied with these values? [Y] or [N]: y
+
+5. Prompt user to enter desired directory prefix
+
+Please enter the prefix for the new directory: Tungsten2x2x2
+
+
 
 #### Output
+The result of above input is a sequence of directories filled with VASP starting files with the given prefixes. The numerical value following "ENCUT" in the directory title is equivalent to the ENCUT value provided in respective INCAR file.
+
+<img src="https://github.com/cameronmcelfresh/vasp-toolkit/blob/master/result.JPG" width="600">
+
 
 ### ENCUT_scape
 
