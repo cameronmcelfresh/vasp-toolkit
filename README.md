@@ -167,6 +167,100 @@ The user must select the directory that contains all of the folders with each VA
 
 #### Output
 
+Encut_val: 100
+Toten_val: 565.635
+Toten_val: -207.81
+Toten_val: -228.70
+Toten_val: -228.74
+Toten_val: -228.74
+Toten_val: -170.44
+Toten_val: -148.12
+Toten_val: -148.10
+Toten_val: -147.93
+Toten_val: -147.92
+Toten_val: -147.92
+Toten_val: -147.92
+Toten_val: -147.92
+Toten_val: -147.92
+Toten_val: -147.92
+Toten_val: -147.92
+
+Encut_val: 200
+Toten_val: 1417.13
+Toten_val: -128.82
+Toten_val: -217.21
+Toten_val: -218.07
+Toten_val: -218.08
+Toten_val: -209.51
+Toten_val: -207.07
+Toten_val: -206.98
+Toten_val: -206.98
+Toten_val: -206.98
+Toten_val: -206.98
+Toten_val: -206.98
+Toten_val: -206.98
+Toten_val: -206.98
+Toten_val: -206.98
+
+Encut_val: 300
+Toten_val: 1796.14
+Toten_val: -87.966
+Toten_val: -215.83
+Toten_val: -217.76
+Toten_val: -217.77
+Toten_val: -209.40
+Toten_val: -207.12
+Toten_val: -207.03
+Toten_val: -207.03
+Toten_val: -207.03
+Toten_val: -207.03
+Toten_val: -207.03
+Toten_val: -207.03
+Toten_val: -207.03
+Toten_val: -207.03
+
+Encut_val: 400
+Toten_val: 2065.21
+Toten_val: -55.107
+Toten_val: -214.92
+Toten_val: -217.78
+Toten_val: -217.80
+Toten_val: -209.45
+Toten_val: -207.14
+Toten_val: -207.04
+Toten_val: -207.04
+Toten_val: -207.04
+Toten_val: -207.04
+Toten_val: -207.04
+Toten_val: -207.04
+Toten_val: -207.04
+
+Encut_val: 50
+
+Encut_val: 500
+Toten_val: 2270.94
+Toten_val: -26.196
+Toten_val: -214.00
+Toten_val: -217.79
+Toten_val: -217.81
+Toten_val: -209.45
+Toten_val: -207.14
+Toten_val: -207.05
+Toten_val: -207.05
+Toten_val: -207.04
+Toten_val: -207.04
+Toten_val: -207.04
+Toten_val: -207.04
+Toten_val: -207.04
+ENCUT   TOTEN
+100     -147.92
+200     -206.98
+300     -207.03
+400     -207.04
+500     -207.04
+
+<img src="https://github.com/cameronmcelfresh/vasp-toolkit/blob/master/encut_plot.JPG" width="600">
+
 
 
 
