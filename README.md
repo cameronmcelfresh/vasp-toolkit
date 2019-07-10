@@ -132,12 +132,12 @@ Please enter ENCUT minimum: 50
 
 Please enter ENCUT maximum: 250
 
-Please enter the number of encut values to make: 5
-You will make encut values:
-50
-100
-150
-200
+Please enter the number of encut values to make: 5\
+You will make encut values:\
+50\
+100\
+150\
+200\
 250
 
 
