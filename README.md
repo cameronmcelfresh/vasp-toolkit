@@ -84,11 +84,11 @@ The user is then prompted to select the directory that contains the initial CONT
 #### Output
 If the original directory selected apeared as shown below:
 
-<img src="https://github.com/cameronmcelfresh/vasp-toolkit/blob/master/neb_initial.JPG" width="400">
+<img src="https://github.com/cameronmcelfresh/vasp-toolkit/blob/master/neb_initial.JPG" width="600">
 
-A series of folders labeled 00, 01, 02, ..etc. would be generated - each containing a POSCAR file with the linearly interpolated atomic positions. 
+A series of folders labeled 00, 01, 02, ..etc. will be generated - each containing a POSCAR file with the linearly interpolated atomic positions. 
 
-<img src="https://github.com/cameronmcelfresh/vasp-toolkit/blob/master/neb_final.JPG" width="400">
+<img src="https://github.com/cameronmcelfresh/vasp-toolkit/blob/master/neb_final.JPG" width="600">
 
 Note that the first and last folder (00, and 07 in this case) hold the same positions as the CONTCAR_ei and CONTCAR_ef files, respectively. 
 
