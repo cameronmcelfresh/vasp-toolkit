@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Jun 13 12:48:44 2019
-
-@author: Cameron
-"""
 
 """The program generates the required POSCAR files to run a NEB calculation on VASP
 
@@ -22,8 +17,7 @@ output will be the following folders and files:
     03 -> POSCAR
     04 -> POSCAR
     05 -> POSCAR
-    06 -> POSCAR
-    07 -> POSCAR  (final position from CONTCAR_ef)"""
+    06 -> POSCAR  (final position from CONTCAR_ef)"""
     
 from tkinter import filedialog
 from tkinter import *
@@ -31,42 +25,51 @@ import os
 import shutil
 import numpy as np
 
-"""Specify the number of images to create and the numbers of atoms"""
 
-num_images = 5 #number of images to prepare
-num_atoms = 17 #Total number of atoms (including any interstitials)
+# Specify the number of images to create
+num_images = int(input("Enter the number of images to prepare: " ).strip())
 
-"""ONLY CHANGE THE VARIABLES ABOVE THIS LINE"""
+# Calculates the number of atoms in your vasp file by reading line 7 of the provided vasp file
+    # vasp_file: a string of the path to the vasp file
+def number_of_atoms(vasp_file):
+    f = open(vasp_file)
+    lines = f.readlines()
+    numbers = [int(n) for n in lines[6].split()] 
+    f.close()
+
+    return sum(numbers)
 
 
-"""Prompt user to select the directory that contains the starting CONTCAR files"""
-
+# Prompt user to select the directory that contains the starting CONTCAR files
 root = Tk()
-root.directory =  filedialog.askdirectory(title = 'Please select the directy which contains the CONTCAR_ei and CONTCAR_ef files')
-print(root.directory)
-"""Ensure that an CONTCAR_ei and CONTCAR_ef files are contained in the directory"""
+root.directory =  filedialog.askdirectory(title = 'Please select the directory which contains the CONTCAR_ei and CONTCAR_ef files')
+# print(root.directory)
 
 ei_path = root.directory + '/CONTCAR_ei'
 ef_path = root.directory + '/CONTCAR_ef'
 
-print(ei_path)
-print(ef_path)
+# print(ei_path)
+# print(ef_path)
+
+num_atoms = number_of_atoms(ei_path) # total number of atoms (including any interstitials)
 
 if not(os.path.exists(ei_path)) or not(os.path.exists(ef_path)) :
     print("Sorry, this directory does not contain the required CONTCAR files!")
+    print()
+    print("Quitting...")
+    quit()
 
-    
-    
-"""Gather the interpelation data"""
 
-#Create empty arrays to hold position data
+"""Gather the interpolation data"""
+
+# Create empty arrays to hold position data
 initial_pos = np.zeros([num_atoms,3])
 final_pos = np.zeros([num_atoms,3])
 
-collect_data=0 #Binary collect data variable that begins collection of data after "Direct"
-counter=0 #Enstantiate a counter
+collect_data=0 # Binary collect data variable that begins collection of data after "Direct"
+counter=0 # Instantiate a counter
 
-#Open initial positions file
+# Open initial positions file
 f_ei = open(ei_path, "r")
 
 for line in f_ei:
@@ -78,10 +81,9 @@ for line in f_ei:
         initial_pos[counter,1] = float(line.split()[1])
         initial_pos[counter,2] = float(line.split()[2])
         
-        counter+=1
+        counter += 1
     
-    if "Direct" in line:
-        print("found it")
+    if ("Direct" in line) or ("Selective dynamics" in line):
         collect_data=1
         
     #Break out of the loop once all position data has been extracted
@@ -109,14 +111,13 @@ for line in f_ef:
         
         counter+=1
     
-    if "Direct" in line:
-        print("found it")
+    if ("Direct" in line) or ("Selective dynamics" in line):
         collect_data=1
         
     #Break out of the loop once all position data has been extracted
     if counter==num_atoms:
         
-        f_ei.close() #Close file
+        f_ef.close() #Close file
         break
 
 """Define step_vec as the linear step to be taken each iteration"""
@@ -128,19 +129,24 @@ dist_vec = (final_pos-initial_pos)/(num_images+2)
 poscars = []
 
 #Linearly interpolate the atoms positions
-for i in range(num_images+3):
+for i in range(num_images+2):
     poscars.append(initial_pos + i*dist_vec)
 
 
 """Write the new files to the 00 01 02 03 ...etc image folders"""
 
 #Loop through each image POSCAR file
-for i in range(num_images+3):
+for i in range(num_images+2):
     
     #Make the new directory
     dir_string = "0"+str(i)
     new_dir = os.path.join(root.directory, dir_string)
-    os.mkdir(new_dir)
+    
+    try:
+        os.mkdir(new_dir)
+    except:
+        print("Directory " + new_dir.split("\\")[-1] + " already exists. Quitting...")
+        quit()
     
     #Create, and begin writing to new POSCAR file
     new_file = open(new_dir+"/POSCAR", "w")
@@ -179,13 +185,9 @@ for i in range(num_images+3):
                 data_write=0
             
         #Flags to catch the "Direct" line
-        if "Direct" in line:
+        if ("Direct" in line) or ("Selective dynamics" in line):
             data_write =1 #Begin writing linearly interpolated data after "Direct"
     
     #Close our files
-    new_file.close() 
-    f_ei.close()    
-        
-    
-        
-    
+    new_file.close()
+    f_ei.close()
